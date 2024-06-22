@@ -2,7 +2,7 @@ package main.Materia.Modeles;
 
 public class Node {
     private int value;
-    private Node  left;
+    public Node  left;
     private Node rigth;
 
    

@@ -1,19 +1,13 @@
 package main.Materia.Controllers;
-
-
 import java.util.Stack;
-
 import main.Materia.Modeles.Node;
 
 public class ArbolBinario {
-
     //Recorrido del arbol de tipo PreOrder
     public void PreOrderLoop(Node root){
         if (root == null) {
-            return;
-            
+            return;   
         }
-
         Stack<Node> stack = new Stack<>();
         //Agregamos a la pila la raiz para empeazar el recorrido 
         stack.push(root);
@@ -23,31 +17,21 @@ public class ArbolBinario {
             //Agregar los hijos de la derecha
             if (node.getRigth() !=null) {
                 stack.push(node.getRigth());
-                
             }
             // Agregar los hijos de la izquierda a la pila
             if (node.getLeft() !=null) {
-                stack.push(node.getLeft());
-                
-            }
-            
+                stack.push(node.getLeft());       
+            } 
         }
-
-
     }
-
     //metodo preOrder recurrsivo
     public void PreOrderRecurisvo(Node node){
         if (node !=null) {
             System.out.print(node.getValue()+ " - ");
             PreOrderRecurisvo(node.getLeft());
             PreOrderRecurisvo(node.getRigth());
-            
         }
-
     }
-
-    ///////////
     public void postOrderLoop(Node root){
         if (root == null) {
             return;
