@@ -4,8 +4,17 @@ public class Node {
     private int value;
     public Node  left;
     private Node rigth;
+    private int height;
 
    
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
     public Node(int value) {
         this.value = value;
